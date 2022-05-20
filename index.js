@@ -20,11 +20,19 @@
  * OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
  * THE SOFTWARE.
  */
-module.exports =  {
-  graphlib: require("./lib/graphlib"),
-  dagre: require("./lib/dagre"),
-  intersect: require("./lib/intersect"),
-  render: require("./lib/render"),
-  util: require("./lib/util"),
-  version: require("./lib/version")
+
+import dagre from "./vendors/dagre";
+import graphlib from "./vendors/graphlib";
+import intersect from "./lib/intersect";
+import render from "./lib/render";
+import util from "./lib/util";
+import version from "./lib/version";
+
+export default {
+  graphlib: graphlib,
+  dagre: dagre,
+  intersect,
+  render,
+  util,
+  version
 };
